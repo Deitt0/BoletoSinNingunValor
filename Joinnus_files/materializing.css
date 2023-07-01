@@ -1,0 +1,312 @@
+/* Materializing Normal*/
+
+/* form starting stylings ------------------------------- */
+input {
+  font-family: 'Open Sans', sans-serif;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 12px;
+}
+
+.jn-input-group { 
+  position:relative; 
+  margin-bottom:30px;
+  min-height: 60px;
+}
+.jn-input {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width: 100%;
+  border:none;
+  border-bottom:1px solid #A8A8A8;
+}
+
+.jn-input:focus 		{ outline:none; border-bottom: none;}
+
+/* LABEL ======================================= */
+.jn-input-label{
+  color:#4C4B4B; 
+  font-size:14px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+.jn-input:focus ~ .jn-input-label, .jn-input:valid ~ .jn-input-label 		{
+  top:-20px;
+  font-size:14px;
+  color:#6BBDA5;
+}
+
+/* BOTTOM BARS ================================= */
+.jn-input-bar 	{ position:relative; display:block; width: 84%; left: 8%}
+.jn-input-bar:before, .jn-input-bar:after 	{
+  content:'';
+  height:1.5px; 
+  width:0px;
+  bottom:1px; 
+  position:absolute;
+  background: #6BBDA5; 
+  transition:0.4s ease all; 
+  -moz-transition:0.4s ease all; 
+  -webkit-transition:0.4s ease all;
+}
+.jn-input-bar:before {
+  left:50%;
+}
+.jn-input-bar:after {
+  right:50%; 
+}
+
+/* active state */
+.jn-input:focus ~ .jn-input-bar:before, .jn-input:focus ~ .jn-input-bar:after {
+  width:60%;
+}
+
+/* HIGHLIGHTER ================================== */
+.jn-input-highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+.jn-input:focus ~ .jn-input-highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
+/* Materializing Normal*/
+
+
+
+/* Materializing Error */
+.jn-input-group-error        { 
+  position:relative; 
+  margin-bottom:45px; 
+}
+.jn-input-error       {
+  color: #DD3636;
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width: 100%;
+  border:none;
+  border-bottom:1px solid #DD3636;
+}
+
+.jn-input-error::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #DD3636;
+    font-size: 12px;
+}
+
+.jn-input-error:focus     { outline:none; }
+
+/* LABEL ======================================= */
+.jn-input-label-error{
+  color:#DD3636; 
+  font-size:14px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:-18px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+.jn-input-error:focus ~ .jn-input-label-error, .jn-input-error:valid ~ .jn-input-label-error    {
+  top:-20px;
+  font-size:14px;
+  color:#DD3636;
+}
+
+/* BOTTOM BARS ================================= */
+.jn-input-bar-error   { position:relative; display:block; width: 84%; left: 8%}
+.jn-input-bar-error:before, .jn-input-bar-error:after   {
+  content:'';
+  height:1.5px; 
+  width:0px;
+  bottom:1px; 
+  position:absolute;
+  background: #DD3636; 
+  transition:0.4s ease all; 
+  -moz-transition:0.4s ease all; 
+  -webkit-transition:0.4s ease all;
+}
+.jn-input-bar-error:before {
+  left:50%;
+}
+.jn-input-bar-error:after {
+  right:50%; 
+}
+
+/* active state */
+.jn-input-error:focus ~ .jn-input-bar-error:before, .jn-input-error:focus ~ .jn-input-bar-error:after {
+  width:60%;
+}
+
+/* HIGHLIGHTER ================================== */
+.jn-input-highlight-error {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+.jn-input-error:focus ~ .jn-input-highlight-error {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+/* Materializing Error */
+
+
+/* Materializing Succeded */
+.jn-input-group-succeded        { 
+  position:relative; 
+  margin-bottom:30px;
+}
+.jn-input-succeded       {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  /* color: #32A481;*/
+  color: #333;
+  width: 100%;
+  border:none;
+  border-bottom:1px solid #32A481;
+}
+
+.jn-input-succeded::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #32A481;
+    font-size: 12px;
+}
+
+.jn-input-succeded:focus     { outline:none; }
+
+/* LABEL ======================================= */
+.jn-input-label-succeded{
+  color:#32A481; 
+  font-size:14px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+.jn-input-succeded:focus ~ .jn-input-label-succeded, .jn-input-succeded:valid ~ .jn-input-label-succeded    {
+  top:-20px;
+  font-size:14px;
+  color:#32A481;
+}
+
+/* BOTTOM BARS ================================= */
+.jn-input-bar-succeded   { position:relative; display:block; width: 84%; left: 8%}
+.jn-input-bar-succeded:before, .jn-input-bar-succeded:after   {
+  content:'';
+  height:1.5px; 
+  width:0px;
+  bottom:1px; 
+  position:absolute;
+  background: #32A481; 
+  transition:0.4s ease all; 
+  -moz-transition:0.4s ease all; 
+  -webkit-transition:0.4s ease all;
+}
+.jn-input-bar-succeded:before {
+  left:50%;
+}
+.jn-input-bar-succeded:after {
+  right:50%; 
+}
+
+/* active state */
+.jn-input-succeded:focus ~ .jn-input-bar-succeded:before, .jn-input-succeded:focus ~ .jn-input-bar-succeded:after {
+  width:60%;
+}
+
+/* HIGHLIGHTER ================================== */
+.jn-input-highlight-succeded {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+.jn-input-succeded:focus ~ .jn-input-highlight-succeded {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+/* Materializing Succeded */
